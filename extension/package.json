@@ -15,11 +15,11 @@
 		"MSP430",
 		"MSP430X"
 	],
-	"homepage": "",
-	"bugs": "",
+	"homepage": "https://github.com/eliaschr/msp430x-theia",
+	"bugs": "https://github.com/eliaschr/msp430x-theia/issues",
 	"repository": {
-		"type": "",
-		"url": ""
+		"type": "git",
+		"url": "https://github.com/eliaschr/msp430x-theia.git"
 	},
 	"pricing": "Free",
 	"license": "MIT",
