@@ -1,0 +1,57 @@
+{
+	"name": "msp430x-assembly",
+	"displayName": "MSP430(X) Assembly",
+	"description": "Support for MSP430 assemblers in Visual Studio Code",
+	"version": "0.1.0",
+	"icon": "logo.png",
+	"publisher": "eliaschr",
+	"categories": [
+		"Programming Languages"
+	],
+	"keywords": [
+		"assembly",
+		"assembler",
+		"Texas Instruments",
+		"MSP430",
+		"MSP430X"
+	],
+	"homepage": "",
+	"bugs": "",
+	"repository": {
+		"type": "",
+		"url": ""
+	},
+	"pricing": "Free",
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.44.0"
+	},
+	"contributes": {
+		"languages": [
+			{
+				"id": "msp430x",
+				"aliases": [
+					"MSP430X Assembly",
+					"msp430x"
+				],
+				"extensions": [
+					".a43",
+					".asm",
+					".inc",
+					".s",
+					".s43",
+					".h",
+					".h43"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "msp430x",
+				"scopeName": "source.asm",
+				"path": "./syntaxes/msp430x-asm.tmLanguage.json"
+			}
+		]
+	}
+}

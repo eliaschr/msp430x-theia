@@ -1,0 +1,249 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "MSP430(X) Assembly",
+	"patterns": [
+		{ "include": "#comments" },
+		{ "include": "#preprocessor"},
+		{ "include": "#funcs"},
+		{ "include": "#keywords" },
+		{ "include": "#strings" },
+		{ "include": "#operators" },
+		{ "include": "#registers" },
+		{ "include": "#numbers" },
+		{ "include": "#labels" }
+	],
+	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.msp430x",
+					"match": ";(.)*$"
+				},
+				{
+					"name": "comment.line.msp430x",
+					"match": "^\\*.*$"
+				}
+			]
+		},
+		"preprocessor": {
+			"patterns": [
+				{
+					"name": "meta.preprocessor.section.msp430x",
+					"match": "^\\s+\\.(bss|data|intvec|sect|text)\\b"
+				},
+				{
+					"name": "meta.preprocessor.section.msp430x",
+					"match": "\\.usect\\b"
+				},
+				{
+					"match": "^\\s+\\.(group|if|loop|enum|struct|asmfunc)\\b",
+					"name": "entity.name.directive.start.msp430x"
+				},
+				{
+					"match": "\\.macro\\b",
+					"name": "entity.name.directive.start.msp430x"
+				},
+				{
+					"match": "^\\s+\\.end(group|if|m|loop|enum|struct|asmfunc)\\b",
+					"name": "entity.name.directive.end.msp430x"
+				},
+				{
+					"name": "entity.name.directive.msp430x",
+					"match": "^\\s+\\.gmember\\b"
+				},
+				{
+					"name": "meta.preprocessor.directive.msp430x",
+					"match": "^\\s+\\.(retain|retainrefs)\\b"
+				},
+				{
+					"name": "meta.preprocessor.directive.msp430x",
+					"match": "\\.(bits|byte|char|cstring|double|field|float|half|int|long|short|string|word)\\b"
+				},
+				{
+					"name": "meta.preprocessor.directive.msp430x",
+					"match": "\\.u(byte|char|half|int|long|short|word)\\b"
+				},
+				{
+					"name": "meta.preprocessor.directive.msp430x",
+					"match": "^\\s+\\.(align|bes|space)\\b"
+				},
+				{
+					"name": "meta.preprocessor.directive.msp430x",
+					"match": "^\\s+\\.(dr|drno|fc|fcno|m|mno|no|ss|ssno)?list\\b"
+				},
+				{
+					"name": "meta.preprocessor.directive.msp430x",
+					"match": "^\\s+\\.(length|option|page|tab|title|width)\\b"
+				},
+				{
+					"name": "meta.preprocessor.directive.msp430x",
+					"match": "^\\s+\\.(copy|include|mlib)\\b"
+				},
+				{
+					"name": "meta.preprocessor.directive.msp430x",
+					"match": "^\\s+\\.(common|def|global|ref|symdepend|weak)\\b"
+				},
+				{
+					"name": "meta.preprocessor.directive.msp430x",
+					"match": "^\\s+\\.(asg|define|elfsym|eval|label|newblock|unasg|undefine)\\b"
+				},
+				{
+					"name": "meta.preprocessor.msp430x",
+					"match": "\\.(equ|set|tag)\\b"
+				},
+				{
+					"name": "entity.name.directive.msp430x",
+					"match": "^\\s+\\.(else|elseif|break|emember|mexit|var)\\b"
+				},
+				{
+					"name": "meta.preprocessor.msp430x",
+					"match": "^\\s+\\.(e|m|w)msg\\b"
+				},
+				{
+					"name": "meta.preprocessor.directive.msp430x",
+					"match": "^\\s+\\.(setsect|setsym|cdecls|end)\\b"
+				}
+			]
+		},
+		"funcs": {
+			"patterns": [
+				{
+					"match": "\\$(HI16|LO16|acos|asin|atan|atan2|ceil|cos|cosh|cvf|cvl|exp|fabs|floor|fmod|int|ldexp|log|log10|max|min|pow|round|sgn|sin|sinh|sqrt|strtodd|tan|tanh|trunc|isdefed)\\b",
+					"name": "meta.preprocessor.directive.msp430x"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.msp430x",
+					"match": "(?i)\\b(ADD|ADDC|AND|BIC|BIS|BIT|CMP|DADD|MOV|PUSH|RRA|RRC|SUB|SUBC|XOR)\\b"
+				},
+				{
+					"name": "keyword.msp430x",
+					"match": "(?i)\\b(SWPB|SXT)\\b"
+				},
+				{
+					"name": "keyword.less.msp430x",
+					"match": "(?i)\\b(ADC|CLR|DADC|DEC|DECD|INC|INCD|INV|POP|RLA|RLC|SBC|TST)\\b"
+				},
+				{
+					"name": "keyword.less.msp430x",
+					"match": "(?i)\\b(CLRC|CLRN|CLRZ|DINT|EINT|NOP|SETC|SETN|SETZ)\\b"
+				},
+				{
+					"name": "keyword.control.msp430x",
+					"match": "(?i)\\b(CALL|CALLA|JC|JHS|JEQ|JZ|JGE|JL|JMP|JN|JNC|JLO|JNE|JNZ|RETI)\\b"
+				},
+				{
+					"name": "keyword.control.less.msp430x",
+					"match": "(?i)\\b(BR|BRA|RET|RETA)\\b"
+				},
+				{
+					"name": "keyword.msp430x",
+					"match": "(?i)\\b(ADDX|ADDCX|ANDX|BICX|BISX|BITX|CMPX|DADDX|MOVX|PUSHX|RRAX|RRCX|RRUX|SUBX|SUBCX|XORX)\\b"
+				},
+				{
+					"name": "keyword.msp430x",
+					"match": "(?i)\\b(POPM|PUSHM|RLAM|RRAM|RRCM|RRUM|SWPBX|SXTX)\\b"
+				},
+				{
+					"name": "keyword.msp430x",
+					"match": "(?i)\\b(ADDA|CMPA|MOVA|SUBA)\\b"
+				},
+				{
+					"name": "keyword.less.msp430x",
+					"match": "(?i)\\b(ADCX|CLRX|DADCX|DECX|DECDX|INCX|INCDX|INVX|POPX|RLAX|RLCX|SBCX|TSTX)\\b"
+				},
+				{
+					"name": "keyword.less.msp430x",
+					"match": "(?i)\\b(CLRA|DECDA|INCDA|TSTA)\\b"
+				},
+				{
+					"name": "keyword.suffix.msp430x",
+					"match": "(?i)\\.(B|W|A)\\b"
+				}
+			]
+		},
+		"registers": {
+			"patterns": [
+				{
+					"match": "(?i)\\b(R([02-9]|1[0-5]?)|PC|SP|SR)\\b",
+					"name": "variable.other.register.msp430x"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.msp430x",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.msp430x",
+					"match": "\\\\."
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"name": "constant.numeric.integer.hexadecimal.msp430x",
+					"match": "(\\-?[0-9]+[0-9a-fA-F]*[hH])\\b"
+				},
+				{
+					"name": "constant.numeric.integer.hexadecimal.msp430x",
+					"match": "(\\-?0x[0-9a-fA-F]+)\\b"
+				},
+				{
+					"name": "constant.numeric.integer.octal.msp430x",
+					"match": "\\-?[0-7]+[qQ]\\b"
+				},
+				{
+					"name": "constant.numeric.integer.octal.msp430x",
+					"match": "(\\-?0[0-7]+)\\b"
+				},
+				{
+					"name": "constant.numeric.integer.binary.msp430x",
+					"match": "\\b[01]+[bB]\\b"
+				},
+				{
+					"name": "constant.numeric.integer.binary.msp430x",
+					"match": "(\\-?0b[01]+)\\b"
+				},
+				{
+					"name": "constant.numeric.integer.decimal.msp430x",
+					"match": "\\-?\\d+"
+				}
+			]
+		},
+		"operators": {
+			"patterns": [
+				{
+					"name": "support.type.msp430x",
+					"match": "[\\~\\+\\-\\*\\/\\%\\=\\!\\&\\|\\^\\~\\<\\>\\(\\)\\[\\]\\{\\}\\#\\@]"
+				}
+			]
+		},
+		"labels": {
+			"patterns": [
+				{
+					"name": "variable.name.label.msp430x",
+					"match": "^([a-zA-Z_$][a-zA-Z0-9_$]*):?"
+				},
+				{
+					"match": "(?<=[\\s\\~\\+\\-\\*\\/\\%\\=\\!\\&\\|\\^\\~\\<\\>\\(\\)\\[\\]\\{\\}\\#\\@])([a-zA-Z_$][a-zA-Z0-9_$]*)\\b",
+					"name": "entity.other.label.inline.msp430x"
+				},
+				{
+					"match": "^([a-zA-Z_][\\w|$]*)\\??\\b",
+					"name": "variable.name.label.msp430x"
+				},
+				{
+					"match": "^\\$([0-9]{1}):?\\b",
+					"name": "variable.name.label.msp430x"
+				}
+			]
+		}
+	},
+	"scopeName": "source.asm"
+}

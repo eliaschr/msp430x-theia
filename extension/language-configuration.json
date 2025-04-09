@@ -1,0 +1,27 @@
+{
+	"comments": {
+		"lineComment": ";"
+	},
+	"brackets": [
+		["(", ")"],
+		["[", "]"]
+	],
+	"autoClosingPairs": [
+		["(", ")"],
+		["[", "]"],
+		["\"", "\""],
+		["'", "'"]
+	],
+	"surroundingPairs": [
+		["(", ")"],
+		["[", "]"],
+		["\"", "\""],
+		["'", "'"]
+	],
+	"folding": {
+		"markers": {
+			"start": "\\b\\.(group|if|loop|enum|struct|asmfunc|macro)\\b",
+			"end": "^\\s*\\.(endgroup|endif|endloop|endenum|endstruct|endasmfunc|endm)\\b"
+		}
+	}
+}
