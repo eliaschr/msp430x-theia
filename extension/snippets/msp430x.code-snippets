@@ -1,0 +1,90 @@
+{
+	"Function Start": {
+		"prefix": ".func",
+		"body": [
+			"${1:FuncName}:			.asmfunc	${2:stack_usage(${3:num})}",
+			"$0"
+		],
+		"description": "Beginning of a new function. Optionally there can be stack_usage(num) to specify the maximum number of bytes used in stack by this function."
+	},
+	"Function End": {
+		"prefix": ".endfunc",
+		"body": [
+			"				.endasmfunc"
+		],
+		"description": "Ending of a function"
+	},
+	"Macro Start": {
+		"prefix": ".macro",
+		"body": [
+			"${1:Name}:			.macro",
+			"$0"
+		],
+		"description": "Beginning of a macro. After .macro you can optionally add parameters"
+	},
+	"Macro End": {
+		"prefix": ".endm",
+		"body": [
+			"				.endm"
+		],
+		"description": "Ending of a macro"
+	},
+	"Struct Start": {
+		"prefix": ".struct",
+		"body": [
+			"${1:Name}:			.struct",
+			"$0"
+		],
+		"description": "Beginning of a structure. After .struct you can optionally add offset expression"
+	},
+	"Struct End": {
+		"prefix": ".endstruct",
+		"body": [
+			"${1:LenName}:		.endstruct",
+			"$0"
+		],
+		"description": "Ending of a structure"
+	},
+	"Struct Tag": {
+		"prefix": ".tag",
+		"body": [
+			"${1:Name}:			.tag	${2:StructName}",
+			"$0"
+		],
+		"description": "Tagging a structure"
+	},
+	"Assembly Function Header": {
+		"prefix": "#head",
+		"body": [
+			"; ${1: Description}"
+			"; Input:				${2: None}",
+			"; Output:				${3: None}",
+			"; Registers Used:		${4: None}",
+			"; Registers Altered:	${5: None}",
+			"; Stack Usage:			${6: None}",
+			"; Depend On Defs:		${7: None}",
+			"; Depend On Vars:		${8: None}",
+			"; Depend On Consts:		${9: None}",
+			"; Depend On Funcs:		${10: None}",
+			"$0"
+		],
+		"description": "Insert a multi-line function header comment",
+		"isFileTemplate": false
+	},
+	"Assembly File Header": {
+		"prefix": "#intro",
+		"body": [
+			";*********************************************************************************************",
+			";* ${1:Project Name}",
+			";*********************************************************************************************",
+			";* ${2:File Name}",
+			"; Created: ${3:${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}}                                                                        *",
+			"; ------------------------------------------------------------------------------------------ *",
+			";* ${4:Description}",
+			";*********************************************************************************************",
+			"$0"
+		],
+		"description": "Insert a multi-line header comment for the current file description",
+		"isFileTemplate": false
+	}
+}

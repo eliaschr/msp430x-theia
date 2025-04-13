@@ -52,6 +52,12 @@
 				"scopeName": "source.asm",
 				"path": "./syntaxes/msp430x-asm.tmLanguage.json"
 			}
+		],
+		"snippets": [
+			{
+				"language": "msp430x",
+				"path": "./snippets/msp430x.code-snippets"
+			}
 		]
 	}
 }
