@@ -1,0 +1,69 @@
+{
+  "name": "MSP430X Assembly Light",
+  "type": "light",
+  "colors": {
+    "editor.background": "#FFFFFF",
+    "editor.foreground": "#000000"
+  },
+  "tokenColors": [
+    {
+      "scope": "comment.line.msp430x",
+      "settings": {
+        "foreground": "#4D7C45",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": "comment.block.structured.msp430x",
+      "settings": {
+        "foreground": "#606060"
+      }
+    },
+    {
+      "scope": "comment.block.trailing.msp430x",
+      "settings": {
+        "foreground": "#777777"
+      }
+    },
+    {
+      "scope": "entity.name.user.msp430x",
+      "settings": {
+        "foreground": "#005FCC",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "keyword.control.commenttag.msp430x",
+      "settings": {
+        "foreground": "#C25E00",
+        "fontStyle": "bold italic"
+      }
+    },
+    {
+      "scope": "keyword.control.commenttag.end.msp430x",
+      "settings": {
+        "foreground": "#C1004C",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": "punctuation.separator.commenttag.msp430x",
+      "settings": {
+        "foreground": "#C28700"
+      }
+    },
+    {
+      "scope": "punctuation.terminator.commenttag.msp430x",
+      "settings": {
+        "foreground": "#C16A5C"
+      }
+    },
+    {
+      "scope": "keyword.mnemonic.msp430x",
+      "settings": {
+        "foreground": "#003F88",
+        "fontStyle": "bold"
+      }
+    }
+  ]
+}

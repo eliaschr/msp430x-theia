@@ -58,6 +58,18 @@
 				"language": "msp430x",
 				"path": "./snippets/msp430x.code-snippets"
 			}
+		],
+		"themes": [
+			{
+				"label": "MSP430X Assembly Theme",
+				"uiTheme": "vs-dark",
+				"path": "./themes/msp430x-color-theme-dark.json"
+			},
+			{
+				"label": "MSP430X Assembly Light",
+				"uiTheme": "vs",
+				"path": "./themes/msp430x-color-theme-light.json"
+			}
 		]
 	}
 }
