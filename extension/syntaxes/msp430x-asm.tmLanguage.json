@@ -30,71 +30,81 @@
 			"patterns": [
 				{
 					"name": "comment.special.note.msp430x",
-					"match": "(^\\*|;).*?\\b(([a-zA-Z0-9_-]+(@))?(?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|BUG):)(.*)((?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|BUG))(#)(end).*",
+					"match": "(^\\*|;).*?\\b(([a-zA-Z0-9_-]+(@))?(?i)((NOTE|INFO|TODO|TO-DO)|(FIXIT|FIX-IT|FIXME|FIX-ME|BUG)):)(.*)((?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|FIXME|FIX-ME|BUG))(#)(end).*",
 					"captures": {
 						"3": {
-							"name": "support.type.msp430x meta.type.name.msp430x markup.italic"
+							"name": "keyword.other.special-comment.msp430x emphasis"
 						},
 						"4": {
 							"name": "support.type.msp430x"
 						},
-						"5": {
-							"name": "keyword.other.special-comment.msp430x markup.bold"
-						},
 						"6": {
-							"name": "comment.special.note.content.msp430x emphasis"
+							"name": "keyword.other.special-comment.msp430x strong"
+						},
+						"7": {
+							"name": "invalid.special-comment.msp430x strong"
 						},
 						"8": {
-							"name": "keyword.other.special-comment.msp430x markup.bold"
-						},
-						"9": {
-							"name": "support.type.msp430x"
+							"name": "support.type.msp430x emphasis"
 						},
 						"10": {
-							"name": "support.type.msp430x meta.type.name.msp430x markup.italic"
+							"name": "keyword.other.special-comment.msp430x strong"
+						},
+						"11": {
+							"name": "support.type.msp430x"
+						},
+						"12": {
+							"name": "keyword.other.special-comment.msp430x emphasis"
 						}
 					}
 				},
 				{
 					"name": "comment.special.note.msp430x",
-					"match": "(^\\*|;).*?\\b((?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|BUG)(@([a-zA-Z0-9_-]+)):)(.*)((?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|BUG))(#)(end).*",
+					"match": "(^\\*|;).*?\\b((?i)((NOTE|INFO|TODO|TO-DO)|(FIXIT|FIX-IT|FIXME|FIX-ME|BUG))(@([a-zA-Z0-9_-]+)):)(.*)((?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|FIXME|FIX-ME|BUG))(#)(end).*",
 					"captures": {
-						"3": {
-							"name": "keyword.other.special-comment.msp430x markup.bold"
-						},
 						"4": {
-							"name": "support.type.msp430x"
+							"name": "keyword.other.special-comment.msp430x strong"
 						},
 						"5": {
-							"name": "meta.type.name.msp430x markup.italic"
+							"name": "invalid.special-comment.msp430x strong"
 						},
 						"6": {
-							"name": "comment.special.note.content.msp430x emphasis"
-						},
-						"8": {
-							"name": "keyword.other.special-comment.msp430x markup.bold"
-						},
-						"9": {
 							"name": "support.type.msp430x"
 						},
+						"7": {
+							"name": "keyword.other.special-comment.msp430x emphasis"
+						},
+						"8": {
+							"name": "support.type.msp430x emphasis"
+						},
 						"10": {
-							"name": "support.type.msp430x meta.type.name.msp430x markup.italic"
+							"name": "keyword.other.special-comment.msp430x strong"
+						},
+						"11": {
+							"name": "support.type.msp430x"
+						},
+						"12": {
+							"name": "keyword.other.special-comment.msp430x emphasis"
 						}
 					}
 				},
 				{
 					"name": "comment.special.note.msp430x",
-					"begin": "(^\\*|;).*?\\b(([a-zA-Z0-9_-]+(@))?(?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|BUG):)",
+					"begin": "(^\\*|;).*?\\b(([a-zA-Z0-9_-]+(@))?(?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|FIXME|FIX-ME|BUG):)",
 					"beginCaptures": {
 						"0": {
 							"patterns": [
 								{
-									"match": "(?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|BUG)",
-									"name": "keyword.other.special-comment.msp430x markup.bold"
+									"match": "(?i)(NOTE|INFO|TODO|TO-DO)",
+									"name": "keyword.other.special-comment.msp430x strong"
+								},
+								{
+									"match": "(?i)(FIXIT|FIX-IT|FIXME|FIX-ME|BUG)",
+									"name": "invalid.special-comment.msp430x strong"
 								},
 								{
 									"match": "[a-zA-Z0-9_-]+(?=@)",
-									"name": "support.type.msp430x meta.type.name.msp430x markup.italic"
+									"name": "keyword.other.special-comment.msp430x emphasis"
 								},
 								{
 									"match": "@",
@@ -103,21 +113,21 @@
 							]
 						}
 					},
-					"end": "(?=^(?!\\*|\\s*;|\\s*$).*$)|(?:^\\*|^\\s*;).*?\\b(?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|BUG)(#)(?i)(end)(.*)",
+					"end": "(?=^(?!\\*|\\s*;|\\s*$).*$)|(?:^\\*|^\\s*;).*?\\b(?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|FIXME|FIX-ME|BUG)(#)(?i)(end)(.*)",
 					"endCaptures": {
 						"0": {
 							"patterns": [
 								{
-									"match": "^(\\*|\\s*;).*?(?=\\b(?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|BUG)(#)(?i)(end)\\b)",
-									"name": "comment.special.note.content.msp430x emphasis"
+									"match": "^(\\*|\\s*;).*?(?=\\b(?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|FIXME|FIX-ME|BUG)(#)(?i)(end)\\b)",
+									"name": "support.type.msp430x emphasis"
 								},
 								{
-									"match": "(?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|BUG)",
-									"name": "keyword.other.special-comment.msp430x markup.bold"
+									"match": "(?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|FIXME|FIX-ME|BUG)",
+									"name": "keyword.other.special-comment.msp430x strong"
 								},
 								{
 									"match": "(?<=#)(?i)(end)",
-									"name": "support.type.msp430x meta.type.name.msp430x markup.italic"
+									"name": "keyword.other.special-comment.msp430x emphasis"
 								},
 								{
 									"match": "#",
@@ -129,23 +139,27 @@
 					"patterns": [
 						{
 							"match": ".+",
-							"name": "comment.special.note.content.msp430x emphasis"
+							"name": "support.type.msp430x emphasis"
 						}
 					]
 				},
 				{
 					"name": "comment.special.note.msp430x",
-					"begin": ";.*(\\b(?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|BUG)((@)([a-zA-Z0-9_-]+):))",
+					"begin": ";.*(\\b(?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|FIXME|FIX-ME|BUG)((@)([a-zA-Z0-9_-]+):))",
 					"beginCaptures": {
 						"0": {
 							"patterns": [
 								{
-									"match": "(?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|BUG)",
-									"name": "keyword.other.special-comment.msp430x markup.bold"
+									"match": "(?i)(NOTE|INFO|TODO|TO-DO)",
+									"name": "keyword.other.special-comment.msp430x strong"
+								},
+								{
+									"match": "(?i)(FIXIT|FIX-IT|FIXME|FIX-ME|BUG)",
+									"name": "invalid.special-comment.msp430x strong"
 								},
 								{
 									"match": "(?<=@)[a-zA-Z0-9_-]+",
-									"name": "support.type.msp430x meta.type.name.msp430x markup.italic"
+									"name": "keyword.other.special-comment.msp430x emphasis"
 								},
 								{
 									"match": "@",
@@ -154,21 +168,21 @@
 							]
 						}
 					},
-					"end": "(?=^(?!\\*|\\s*;|\\s*$).*$)|(?:^\\*|^\\s*;).*?\\b(?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|BUG)(#)(?i)(end)(.*)",
+					"end": "(?=^(?!\\*|\\s*;|\\s*$).*$)|(?:^\\*|^\\s*;).*?\\b(?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|FIXME|FIX-ME|BUG)(#)(?i)(end)(.*)",
 					"endCaptures": {
 						"0": {
 							"patterns": [
 								{
-									"match": "^(\\*|\\s*;).*?(?=\\b(?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|BUG)(#)(?i)(end)\\b)",
-									"name": "comment.special.note.content.msp430x emphasis"
+									"match": "^(\\*|\\s*;).*?(?=\\b(?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|FIXME|FIX-ME|BUG)(#)(?i)(end)\\b)",
+									"name": "support.type.msp430x emphasis"
 								},
 								{
-									"match": "(?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|BUG)",
-									"name": "keyword.other.special-comment.msp430x markup.bold"
+									"match": "(?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|FIXME|FIX-ME|BUG)",
+									"name": "keyword.other.special-comment.msp430x strong"
 								},
 								{
 									"match": "(?<=#)(?i)(end)",
-									"name": "support.type.msp430x meta.type.name.msp430x markup.italic"
+									"name": "keyword.other.special-comment.msp430x emphasis"
 								},
 								{
 									"match": "#",
@@ -180,7 +194,7 @@
 					"patterns": [
 						{
 							"match": ".+",
-							"name": "comment.special.note.content.msp430x emphasis"
+							"name": "support.type.msp430x emphasis"
 						}
 					]
 				}
@@ -412,24 +426,36 @@
 		"labels": {
 			"patterns": [
 				{
-					"name": "variable.name.label.msp430x",
-					"match": "^([a-zA-Z_$][a-zA-Z0-9_$]*):?"
+					"match": ":[a-zA-Z_][\\w|$]*:",
+					"name": "variable.name.label.msp430x markup.italic.msp430x"
 				},
 				{
-					"match": "(?<=[\\s\\~\\+\\-\\*\\/\\%\\=\\!\\&\\|\\^\\~\\<\\>\\(\\)\\[\\]\\{\\}\\#\\@])([a-zA-Z_$][a-zA-Z0-9_$]*)\\b",
+					"name": "variable.name.label.msp430x",
+					"match": "^([a-zA-Z_][a-zA-Z0-9_$]*)(?=:)"
+				},
+				{
+					"name": "variable.name.label.msp430x",
+					"match": "^([a-zA-Z_][a-zA-Z0-9_$]*)(?=\\s)"
+				},
+				{
+					"match": "(?<=[\\s\\~\\+\\-\\*\\/\\%\\=\\!\\&\\|\\^\\~\\<\\>\\(\\)\\[\\]\\{\\}\\#\\@,])([a-zA-Z_][a-zA-Z0-9_$]*)\\b",
 					"name": "entity.other.label.inline.msp430x"
 				},
 				{
-					"match": "^([a-zA-Z_][\\w|$]*)\\??\\b",
-					"name": "variable.name.label.msp430x"
+					"match": "^([a-zA-Z_][a-zA-Z0-9_$]*)\\??",
+					"name": "variable.name.label.local.msp430x"
 				},
 				{
-					"match": "^\\$([0-9]{1}):?\\b",
-					"name": "variable.name.label.msp430x"
+					"match": "^\\$([0-9]{1})(?=:)",
+					"name": "variable.name.label.local.msp430x"
 				},
 				{
-					"match": ":[a-zA-Z_][\\w|$]*:",
-					"name": "variable.name.label.msp430x markup.italic.msp430x"
+					"match": "^\\$([0-9]{1})(?=\\s)",
+					"name": "variable.name.label.local.msp430x"
+				},
+				{
+					"name": "entity.other.label.local.inline.msp430x",
+					"match": "(?!^)(\\$[0-9]{0,1})(?!\\w)"
 				}
 			]
 		}

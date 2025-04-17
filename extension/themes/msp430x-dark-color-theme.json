@@ -1,0 +1,71 @@
+{
+	"$schema": "vscode://schemas/color-theme",
+	"name": "MSP430X Assembly Dark",
+	"type": "dark",
+	"semanticHighlighting": true,
+	"colors": {
+		"editor.background": "#1E1E1E",
+		"editor.foreground": "#D4D4D4"
+	},
+	"tokenColors": [
+		{
+			"scope": "comment.line.msp430x",
+			"settings": {
+				"foreground": "#6A9955",
+				"fontStyle": "italic"
+			}
+		},
+		{
+			"scope": "comment.block.structured.msp430x",
+			"settings": {
+				"foreground": "#C0C0C0"
+			}
+		},
+		{
+			"scope": "comment.block.trailing.msp430x",
+			"settings": {
+				"foreground": "#A0A0A0"
+			}
+		},
+		{
+			"scope": "entity.name.user.msp430x",
+			"settings": {
+				"foreground": "#4FC1FF",
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"scope": "keyword.control.commenttag.msp430x",
+			"settings": {
+				"foreground": "#FFB454",
+				"fontStyle": "bold italic"
+			}
+		},
+		{
+			"scope": "keyword.control.commenttag.end.msp430x",
+			"settings": {
+				"foreground": "#FF4C81",
+				"fontStyle": "italic"
+			}
+		},
+		{
+			"scope": "punctuation.separator.commenttag.msp430x",
+			"settings": {
+				"foreground": "#FFD700"
+			}
+		},
+		{
+			"scope": "punctuation.terminator.commenttag.msp430x",
+			"settings": {
+				"foreground": "#FFA07A"
+			}
+		},
+		{
+			"scope": "keyword.mnemonic.msp430x",
+			"settings": {
+				"foreground": "#569CD6",
+				"fontStyle": "bold"
+			}
+		}
+	]
+}

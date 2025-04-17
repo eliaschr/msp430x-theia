@@ -63,12 +63,12 @@
 			{
 				"label": "MSP430X Assembly Theme",
 				"uiTheme": "vs-dark",
-				"path": "./themes/msp430x-color-theme-dark.json"
+				"path": "./themes/msp430x-dark-color-theme.json"
 			},
 			{
 				"label": "MSP430X Assembly Light",
 				"uiTheme": "vs",
-				"path": "./themes/msp430x-color-theme-light.json"
+				"path": "./themes/msp430x-light-color-theme.json"
 			}
 		]
 	}

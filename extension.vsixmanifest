@@ -9,7 +9,7 @@
 			<GalleryFlags>Public</GalleryFlags>
 			
 			<Properties>
-				<Property Id="Microsoft.VisualStudio.Code.Engine" Value="^1.44.0" />
+				<Property Id="Microsoft.VisualStudio.Code.Engine" Value="^1.70.0" />
 				<Property Id="Microsoft.VisualStudio.Code.ExtensionDependencies" Value="" />
 				<Property Id="Microsoft.VisualStudio.Code.ExtensionPack" Value="" />
 				<Property Id="Microsoft.VisualStudio.Code.ExtensionKind" Value="workspace" />
@@ -33,8 +33,8 @@
 		<Dependencies/>
 		<Assets>
 			<Asset Type="Microsoft.VisualStudio.Code.Manifest" Path="extension/package.json" Addressable="true" />
-			<Asset Type="Microsoft.VisualStudio.Services.Content.Details" Path="extension/readme.md" Addressable="true" />
-			<Asset Type="Microsoft.VisualStudio.Services.Content.License" Path="extension/LICENSE.txt" Addressable="true" />
+			<Asset Type="Microsoft.VisualStudio.Services.Content.Details" Path="readme.md" Addressable="true" />
+			<Asset Type="Microsoft.VisualStudio.Services.Content.License" Path="LICENSE.txt" Addressable="true" />
 			<Asset Type="Microsoft.VisualStudio.Services.Icons.Default" Path="extension/logo.png" Addressable="true" />
 		</Assets>
 	</PackageManifest>
