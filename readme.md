@@ -50,9 +50,11 @@ In the comments there can be some special words that define a special comment. T
 - **FIXME** or **FIX-ME**
 - **FIXIT** or **FIX-IT**
 - **BUG**
+- **WARN**
+- **WARNING**
 
 These words can be used in different ways, always inside comments:
-- **Single**: Just the special word followed by a colon \(':'\).
+- **Single**: Just the special word followed by a colon \(':'\), i.e. "NOTE:"
 - **Username prefixed**: Like "username@INFO:"
 - **Username postfixed**: Like "TODO@username"
 
@@ -63,7 +65,8 @@ All these,trigger a special comment. A special comment continues until:
 All empty lines within a special comment belong to it, thus an empty line does not terminate
 them. The special comments are highlighted differently than simple comments to attract the
 programmers eye. Special words **FIXME**, **FIX-ME**, **FIXIT**, **FIX-IT** and **BUG** are
-red, to give the meaning of a warning.
+red, while special words **WARN** and **WARNING** become yellowish to give the meaning of a
+warning.
 
 ![Screenshot of the diffrerent kinds of special comment blocks supported](./Images/CommentSections.png)
 
