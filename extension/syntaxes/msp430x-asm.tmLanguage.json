@@ -30,7 +30,7 @@
 			"patterns": [
 				{
 					"name": "comment.special.note.msp430x",
-					"match": "(^\\*|;).*?\\b(([a-zA-Z0-9_-]+(@))?(?i)((NOTE|INFO|TODO|TO-DO)|(FIXIT|FIX-IT|FIXME|FIX-ME|BUG)|(WARNING|WARN)):)(.*)((?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|FIXME|FIX-ME|BUG|WARNING|WARN))(#)(end).*",
+					"match": "(^\\*|;).*?\\b(([a-zA-Z0-9_-]+(@))?(?i)((NOTE|INFO|TODO|TO-DO)|(FIXIT|FIX-IT|FIXME|FIX-ME|BUG)|(CHECK|WARNING|WARN)):)(.*)((?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|FIXME|FIX-ME|BUG|CHECK|WARNING|WARN))(#)(end).*",
 					"captures": {
 						"3": {
 							"name": "keyword.other.special-comment.msp430x emphasis"
@@ -63,7 +63,7 @@
 				},
 				{
 					"name": "comment.special.note.msp430x",
-					"match": "(^\\*|;).*?\\b((?i)((NOTE|INFO|TODO|TO-DO)|(FIXIT|FIX-IT|FIXME|FIX-ME|BUG)|(WARN|WARNING))(@([a-zA-Z0-9_-]+)):)(.*)((?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|FIXME|FIX-ME|BUG|WARNING|WARN))(#)(end).*",
+					"match": "(^\\*|;).*?\\b((?i)((NOTE|INFO|TODO|TO-DO)|(FIXIT|FIX-IT|FIXME|FIX-ME|BUG)|(CHECK|WARN|WARNING))(@([a-zA-Z0-9_-]+)):)(.*)((?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|FIXME|FIX-ME|BUG|CHECK|WARNING|WARN))(#)(end).*",
 					"captures": {
 						"4": {
 							"name": "keyword.other.special-comment.msp430x strong"
@@ -96,7 +96,7 @@
 				},
 				{
 					"name": "comment.special.note.msp430x",
-					"begin": "(^\\*|;).*?\\b(([a-zA-Z0-9_-]+(@))?(?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|FIXME|FIX-ME|BUG|WARNING|WARN):)",
+					"begin": "(^\\*|;).*?\\b(([a-zA-Z0-9_-]+(@))?(?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|FIXME|FIX-ME|BUG|CHECK|WARNING|WARN):)",
 					"beginCaptures": {
 						"0": {
 							"patterns": [
@@ -109,7 +109,7 @@
 									"name": "invalid.special-comment.msp430x strong"
 								},
 								{
-									"match": "(?i)(WARNING|WARN)",
+									"match": "(?i)(CHECK|WARNING|WARN)",
 									"name": "entity.name.function.msp430x strong"
 								},
 								{
@@ -123,16 +123,16 @@
 							]
 						}
 					},
-					"end": "(?=^(?!\\*|\\s*;|\\s*$).*$)|(?:^\\*|^\\s*;).*?\\b(?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|FIXME|FIX-ME|BUG|WARNING|WARN)(#)(?i)(end)(.*)",
+					"end": "(?=^(?!\\*|\\s*;|\\s*$).*$)|(?:^\\*|^\\s*;).*?\\b(?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|FIXME|FIX-ME|BUG|CHECK|WARNING|WARN)(#)(?i)(end)(.*)",
 					"endCaptures": {
 						"0": {
 							"patterns": [
 								{
-									"match": "^(\\*|\\s*;).*?(?=\\b(?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|FIXME|FIX-ME|BUG|WARNING|WARN)(#)(?i)(end)\\b)",
+									"match": "^(\\*|\\s*;).*?(?=\\b(?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|FIXME|FIX-ME|BUG|CHECK|WARNING|WARN)(#)(?i)(end)\\b)",
 									"name": "support.type.msp430x emphasis"
 								},
 								{
-									"match": "(?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|FIXME|FIX-ME|BUG|WARNING|WARN)",
+									"match": "(?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|FIXME|FIX-ME|BUG|CHECK|WARNING|WARN)",
 									"name": "keyword.other.special-comment.msp430x strong"
 								},
 								{
@@ -155,7 +155,7 @@
 				},
 				{
 					"name": "comment.special.note.msp430x",
-					"begin": ";.*(\\b(?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|FIXME|FIX-ME|BUG|WARNING|WARN)((@)([a-zA-Z0-9_-]+):))",
+					"begin": ";.*(\\b(?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|FIXME|FIX-ME|BUG|CHECK|WARNING|WARN)((@)([a-zA-Z0-9_-]+):))",
 					"beginCaptures": {
 						"0": {
 							"patterns": [
@@ -168,7 +168,7 @@
 									"name": "invalid.special-comment.msp430x strong"
 								},
 								{
-									"match": "(?i)(WARNING|WARN)",
+									"match": "(?i)(CHECK|WARNING|WARN)",
 									"name": "entity.name.function.msp430x strong"
 								},
 								{
@@ -182,16 +182,16 @@
 							]
 						}
 					},
-					"end": "(?=^(?!\\*|\\s*;|\\s*$).*$)|(?:^\\*|^\\s*;).*?\\b(?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|FIXME|FIX-ME|BUG|WARNING|WARN)(#)(?i)(end)(.*)",
+					"end": "(?=^(?!\\*|\\s*;|\\s*$).*$)|(?:^\\*|^\\s*;).*?\\b(?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|FIXME|FIX-ME|BUG|CHECK|WARNING|WARN)(#)(?i)(end)(.*)",
 					"endCaptures": {
 						"0": {
 							"patterns": [
 								{
-									"match": "^(\\*|\\s*;).*?(?=\\b(?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|FIXME|FIX-ME|BUG|WARNING|WARN)(#)(?i)(end)\\b)",
+									"match": "^(\\*|\\s*;).*?(?=\\b(?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|FIXME|FIX-ME|BUG|CHECK|WARNING|WARN)(#)(?i)(end)\\b)",
 									"name": "support.type.msp430x emphasis"
 								},
 								{
-									"match": "(?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|FIXME|FIX-ME|BUG|WARNING|WARN)",
+									"match": "(?i)(NOTE|INFO|TODO|TO-DO|FIXIT|FIX-IT|FIXME|FIX-ME|BUG|CHECK|WARNING|WARN)",
 									"name": "keyword.other.special-comment.msp430x strong"
 								},
 								{
